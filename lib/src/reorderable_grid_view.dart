@@ -601,6 +601,13 @@ class ReorderableGridViewState extends State<ReorderableGridView> {
           enabled: enable,
           child: itemWithSemantics,
         );
+      default:
+        return ReorderableGridDelayedDragStartListener(
+          key: itemGlobalKey,
+          index: index,
+          enabled: enable,
+          child: itemWithSemantics,
+        );
     }
   }
 
